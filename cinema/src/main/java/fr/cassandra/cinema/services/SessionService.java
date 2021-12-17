@@ -30,6 +30,10 @@ public class SessionService {
 	public void delete(Session session) {
 		this.sessionRepository.delete(session);
 	}
+
+	public List<Session> findSessionsByRoomId(String id) {
+		return this.sessionRepository.findByRoom_Id(id);
+	}
 	
 	
 	

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.cassandra.cinema.models.Room;
 import fr.cassandra.cinema.models.Session;
 import fr.cassandra.cinema.services.SessionService;
 
@@ -50,5 +51,10 @@ public class SessionController {
 	@DeleteMapping
 	public void deleteSession(@RequestBody Session session) {
 		this.sessionService.delete(session);
+	}
+	
+	@GetMapping("salle/{id}")
+	public List<Session> findSessionsByRoomId(@PathVariable String id) {
+		return this.sessionService.findSessionsByRoomId(id);
 	}
 }
