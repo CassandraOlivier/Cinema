@@ -1,6 +1,7 @@
 package fr.cassandra.cinema.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import fr.cassandra.cinema.models.Session;
 import fr.cassandra.cinema.repositories.SessionRepository;
@@ -19,6 +20,11 @@ public class SessionService {
 
 	public List<Session> findAll() {
 		return this.sessionRepository.findAll();
+	}
+
+
+	public Optional<Session> findById(String id) {
+		return this.sessionRepository.findById(id);
 	}
 	
 	
