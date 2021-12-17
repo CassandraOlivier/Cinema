@@ -14,5 +14,6 @@ import lombok.NoArgsConstructor;
 public class MovieTheater {
 	
 	@Id
+	private String id;
 	private String name;
 }

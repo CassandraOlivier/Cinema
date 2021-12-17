@@ -3,6 +3,8 @@ package fr.cassandra.cinema.controllers;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +21,13 @@ public class MovieTheatherController {
 		this.service = service;
 	}
 	
+	@PostMapping
+	public MovieTheater createMovieTheater(@RequestBody MovieTheater movieTheater) {
+		return this.service.save(movieTheater);
+	}
+	
 	@GetMapping
-	public List<MovieTheater> getMovieTheaters(){
+	public List<MovieTheater> getMovieTheaters() {
 		return this.service.findAll();	
 	}
 	

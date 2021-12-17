@@ -18,6 +18,11 @@ public class MovieTheaterService {
 	public List<MovieTheater> findAll() {
 		return this.repository.findAll();
 	}
+
+
+	public MovieTheater save(MovieTheater movieTheater) {
+		return this.repository.save(movieTheater);
+	}
 	
 	
 	
