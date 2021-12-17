@@ -25,6 +25,10 @@ public class MovieService {
 	public Optional<Movie> findById(String id) {
 		return this.movieRepository.findById(id);
 	}
+
+	public void delete(Movie movie) {
+		this.movieRepository.delete(movie);
+	}
 	
 	
 }
