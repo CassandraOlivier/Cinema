@@ -24,4 +24,8 @@ public class RoomService {
 	public void delete(Room room) {
 		this.roomRepository.delete(room);
 	}
+
+	public List<Room> findRoomsByMovieTheaterId(String id) {
+		return this.roomRepository.findByMovieTheater_Id(id);
+	}
 }
