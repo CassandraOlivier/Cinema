@@ -1,5 +1,8 @@
 package fr.cassandra.cinema.controllers;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,5 +26,10 @@ public class SessionController {
 	@PostMapping
 	public Session createSession(@RequestBody Session session) {
 		return this.sessionService.save(session);
+	}
+	
+	@GetMapping
+	public List<Session> getSessions() {
+		return this.sessionService.findAll();
 	}
 }
