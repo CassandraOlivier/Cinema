@@ -29,6 +29,10 @@ public class MovieService {
 	public void delete(Movie movie) {
 		this.movieRepository.delete(movie);
 	}
+
+	public List<Movie> findMovieBySessionId(String id) {
+		return this.movieRepository.findBySession_Id(id);
+	}
 	
 	
 }

@@ -49,4 +49,9 @@ public class MovieController {
 	public void deleteMovie(@RequestBody Movie movie) {
 		this.movieService.delete(movie);
 	}
+	
+	@GetMapping("seance/{id}")
+	public List<Movie> findMovieBySessionId(@PathVariable String id) {
+		return this.movieService.findMovieBySessionId(id);
+	}
 }
