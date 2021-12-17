@@ -1,6 +1,7 @@
 package fr.cassandra.cinema.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import fr.cassandra.cinema.models.MovieTheater;
 import fr.cassandra.cinema.repositories.MovieTheaterRepository;
@@ -27,6 +28,11 @@ public class MovieTheaterService {
 
 	public void delete(MovieTheater movieTheater) {
 		this.repository.delete(movieTheater);;
+	}
+
+
+	public Optional<MovieTheater> findById(String id) {
+		return this.repository.findById(id);
 	}
 	
 	

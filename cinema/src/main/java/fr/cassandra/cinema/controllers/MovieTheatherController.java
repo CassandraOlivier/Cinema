@@ -1,9 +1,11 @@
 package fr.cassandra.cinema.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,4 +45,8 @@ public class MovieTheatherController {
 		this.service.delete(movieTheater);
 	}
 	
+	@GetMapping("cinema/{id}")
+	public Optional<MovieTheater> getMovieTheater(@PathVariable String id) {
+		return this.service.findById(id);
+	}
 }
