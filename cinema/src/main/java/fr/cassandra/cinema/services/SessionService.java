@@ -26,6 +26,10 @@ public class SessionService {
 	public Optional<Session> findById(String id) {
 		return this.sessionRepository.findById(id);
 	}
+
+	public void delete(Session session) {
+		this.sessionRepository.delete(session);
+	}
 	
 	
 	
