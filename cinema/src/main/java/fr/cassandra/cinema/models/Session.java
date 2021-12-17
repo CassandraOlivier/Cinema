@@ -17,7 +17,8 @@ import lombok.NoArgsConstructor;
 public class Session {
 	@Id
 	private String id;
-	private Date date;
+	private Date dateDebut;
+	private Date dateFin;
 	@DBRef
 	private Room room;
 }
