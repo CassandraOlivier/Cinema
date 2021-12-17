@@ -1,5 +1,7 @@
 package fr.cassandra.cinema.services;
 
+import java.util.List;
+
 import fr.cassandra.cinema.models.Room;
 import fr.cassandra.cinema.repositories.RoomRepository;
 
@@ -15,4 +17,7 @@ public class RoomService {
 		return this.roomRepository.save(room);
 	}
 
+	public List<Room> findAll() {
+		return this.roomRepository.findAll();
+	}
 }
