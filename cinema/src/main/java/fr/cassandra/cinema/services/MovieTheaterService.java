@@ -23,6 +23,11 @@ public class MovieTheaterService {
 	public MovieTheater save(MovieTheater movieTheater) {
 		return this.repository.save(movieTheater);
 	}
+
+
+	public void delete(MovieTheater movieTheater) {
+		this.repository.delete(movieTheater);;
+	}
 	
 	
 	

@@ -2,6 +2,7 @@ package fr.cassandra.cinema.controllers;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -35,6 +36,11 @@ public class MovieTheatherController {
 	@PutMapping
 	public MovieTheater updateMovieTheater(@RequestBody MovieTheater movieTheater) {
 		return this.service.save(movieTheater);
+	}
+	
+	@DeleteMapping
+	public void deleteMovieTheater(@RequestBody MovieTheater movieTheater) {
+		this.service.delete(movieTheater);
 	}
 	
 }
