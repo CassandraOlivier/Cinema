@@ -20,4 +20,8 @@ public class RoomService {
 	public List<Room> findAll() {
 		return this.roomRepository.findAll();
 	}
+
+	public void delete(Room room) {
+		this.roomRepository.delete(room);
+	}
 }
