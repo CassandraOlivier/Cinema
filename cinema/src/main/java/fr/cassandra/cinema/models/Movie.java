@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Document
 public class Movie {
 	@Id
+	private String id;
 	private String name;
 	private float duration;
 	@DBRef
