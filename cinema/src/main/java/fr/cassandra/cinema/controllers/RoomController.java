@@ -1,6 +1,7 @@
 package fr.cassandra.cinema.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +33,11 @@ public class RoomController {
 	@GetMapping
 	public List<Room> getRooms() {
 		return this.roomService.findAll();	
+	}
+	
+	@GetMapping("room/{id}")
+	public Optional<Room> getRoom(@PathVariable String id) {
+		return this.roomService.findById(id);
 	}
 	
 	@PutMapping

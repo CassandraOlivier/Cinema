@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.cassandra.cinema.models.Room;
 import fr.cassandra.cinema.models.Session;
 import fr.cassandra.cinema.services.SessionService;
 
